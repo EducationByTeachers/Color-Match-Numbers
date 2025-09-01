@@ -47,7 +47,7 @@ canvas#confetti { position:fixed; top:0; left:0; width:100%; height:100%; pointe
 <body>
 
 <div id="start-screen" class="screen active">
-<h1>Number Color Match</h1>
+<h1>Number And Words Match</h1>
 <p>First select the number below, then select the matching Spanish word in the grid. Correct matches turn green.</p>
 <button id="start-btn">Start</button>
 </div>
@@ -159,13 +159,7 @@ function showError() {
   setTimeout(()=> errorEl.style.display = 'none', 1500);
 }
 
-function playSound(text) {
-  let utterance = new SpeechSynthesisUtterance(text);
-  utterance.lang = "es-ES";
-  utterance.rate = 0.8;
-  utterance.pitch = 1;
-  speechSynthesis.speak(utterance);
-}
+
 
 function finishGame() {
   messageEl.style.display = "block";
